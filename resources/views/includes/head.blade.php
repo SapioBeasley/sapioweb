@@ -7,7 +7,8 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,700' rel=stylesheet>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700' rel=stylesheet>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel=stylesheet>
-<link href="{{asset('stylesheets/bootstrap.css')}}" rel=stylesheet />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="{{asset('stylesheets/font-awesome.css')}}" rel=stylesheet />
 <link href="{{asset('stylesheets/style.css')}}" rel=stylesheet />
 <!--[if lt IE 9]>
