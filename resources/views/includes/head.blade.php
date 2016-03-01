@@ -4,9 +4,9 @@
 <meta content='1 day' name=revisit-after>
 <meta content='width=device-width, initial-scale=1' name=viewport>
 <link rel="shortcut icon" href="{{asset('favicon.ico?v=' . rand(1, 999))}}" type="image/x-icon">
-<link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,700' rel=stylesheet>
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700' rel=stylesheet>
-<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel=stylesheet>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,700' rel=stylesheet>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,400,300,700' rel=stylesheet>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel=stylesheet>
 <link href="{{asset('stylesheets/bootstrap.css')}}" rel=stylesheet />
 <link href="{{asset('stylesheets/font-awesome.css')}}" rel=stylesheet />
 <link href="{{asset('stylesheets/style.css')}}" rel=stylesheet />
