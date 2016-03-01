@@ -9,7 +9,7 @@
 			</header>
 
 			<section class=jumbotron>
-				<div class='bg faded animated' style='background-image: url(images/work/02.jpg);'></div>
+				<div class='bg faded animated' style='background-image: url(https://source.unsplash.com/random);'></div>
 				<div class='row vcenter'>
 					<div class='col-md-6 col-md-offset-3 text-center'>
 						<h1>We'll Be Right Back</h1>
