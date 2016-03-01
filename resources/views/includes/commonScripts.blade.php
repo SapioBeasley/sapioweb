@@ -1,4 +1,4 @@
-<script src="{{asset('javascripts/jquery.min.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="{{asset('javascripts/jquery.easing.1.3.js')}}"></script>
 <script src="{{asset('javascripts/loader.js')}}"></script>
 <script src="{{asset('javascripts/jquery.mobile.custom.min.js')}}"></script>
