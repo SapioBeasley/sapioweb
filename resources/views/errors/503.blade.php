@@ -9,7 +9,7 @@
             </header>
 
             <section class='jumbotron small'>
-                <div class='bg faded animated' style='background-image: url({{asset('images/work/13.jpg')}});'></div>
+                <div class='bg faded animated' style='background-image: url(https://source.unsplash.com/random);'></div>
                 <div class='row vcenter'>
                     <div class='col-md-12 text-center'>
                         <h1>503</h1>
