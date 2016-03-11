@@ -10,21 +10,21 @@
 		<section class=gray>
 			<div class=row>
 				<div class='col-md-4 mobile-center'>
-					<h4 class=subtitle>Design + Typography</h4>
+					<h4 class=subtitle>Gists + Headlines</h4>
 					<h2>The Blog</h2>
 				</div>
 				<div class=col-md-8>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus accumsan leo, nec congue risus feugiat ac. Mauris viverra ligula velit, sit amet imperdiet nunc tincidunt in. Ut tristique quam congue, aliquam tortor sit amet.</p>
+					<p>There are lots of great blogs for developers, but none for the best and most useful gists from github. Here we highlight some of the greats that we currently use.</p>
 				</div>
 			</div>
 		</section>
 
 		<section class=top-line>
-			<div class=row>
+			<!-- <div class=row>
 				<div class=col-md-12>
 					<div class='filter-container stick' data-spy=affix> <div class=filter-trigger>Categories</div> <ul class=filters> <li> <button data-filter='*'>All</button> </li> <li> <button data-filter='.threedee'>3D</button> </li> <li> <button data-filter='.abstract'>Abstract</button> </li> <li> <button data-filter='.typography'>Typography</button> </li> </ul> </div>
 				</div>
-			</div>
+			</div> -->
 			<div class='col-3 blog' id=grid>
 
 				@foreach ($gists as $gist)
@@ -45,8 +45,29 @@
 				@endforeach
 
 			</div>
-			 <div class=row> <div class='col-md-offset-3 col-md-6 text-center'> <div class=btn-group role=group> <button type=button class="btn btn-xs btn-default active">1</button> <button type=button class="btn btn-xs btn-default">2</button> <button type=button class="btn btn-xs btn-default">3</button> <button type=button class="btn btn-xs btn-default">4</button> </div> </div> </div> </section> <section class=gray> <div class=row> <div class='col-md-6 col-md-offset-3 text-center'> <div class=title-block> <h2>Just Be</h2> </div> <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p> </div> </div>
-			</section>
+			 <!-- <div class=row>
+			 	<div class='col-md-offset-3 col-md-6 text-center'>
+			 		<div class=btn-group role=group>
+			 			<button type=button class="btn btn-xs btn-default active">1</button>
+			 			<button type=button class="btn btn-xs btn-default">2</button>
+			 			<button type=button class="btn btn-xs btn-default">3</button>
+			 			<button type=button class="btn btn-xs btn-default">4</button>
+			 		</div>
+			 	</div>
+			 </div> -->
+
+		</section>
+
+		<section class=gray>
+			<div class=row>
+				<div class='col-md-6 col-md-offset-3 text-center'>
+					<div class=title-block>
+						<h2>What are gists?</h2>
+					</div>
+					<p>Gists are a great way to share your work. You can share single files, parts of files, or full applications. You can access gists at https://gist.github.com. Every gist is a Git repository, which means that it can be forked, cloned, and manipulated in every way.</p>
+				</div>
+			</div>
+		</section>
 
 		@include('includes.footer')
 
