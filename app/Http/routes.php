@@ -21,6 +21,11 @@ Route::get('/contact', [
 	'uses' => 'PagesController@showContact'
 ]);
 
+Route::get('/blog/{id}', [
+	'as' => 'blog.single',
+	'uses' => 'PagesController@showSingleBlog'
+]);
+
 Route::get('/blog', [
 	'as' => 'blog',
 	'uses' => 'PagesController@showBlog'
