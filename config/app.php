@@ -156,6 +156,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Haleks\Markdown\MarkdownServiceProvider::class,
+        Spatie\Tail\TailServiceProvider::class
 
     ],
 

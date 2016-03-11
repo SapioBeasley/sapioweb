@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76dbbaa72ccb70023fb5fc6c41ba5a70",
-    "content-hash": "8c6217f7768927b88f23584affadc338",
+    "hash": "176178f678bacbfb1d2bff8082b3bc2b",
+    "content-hash": "59d34a8ab3aff4ed9f28e8fc91576b8c",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1247,6 +1247,53 @@
                 "shell"
             ],
             "time": "2016-02-27 18:59:18"
+        },
+        {
+            "name": "spatie/laravel-tail",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-tail.git",
+                "reference": "b520449b8f3a184f878c0f7c7f613505a5be114e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/b520449b8f3a184f878c0f7c7f613505a5be114e",
+                "reference": "b520449b8f3a184f878c0f7c7f613505a5be114e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Tail\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The missing tail command for Laravel 5",
+            "homepage": "https://github.com/spatie/laravel-tail",
+            "keywords": [
+                "laravel 5",
+                "laravel-tail",
+                "log",
+                "tail"
+            ],
+            "time": "2015-10-11 09:45:38"
         },
         {
             "name": "swiftmailer/swiftmailer",
