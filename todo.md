@@ -1,2 +1,2 @@
-- [ ] Add github api as blog.
-- [ ] Use https://github.com/milo/github-api as the github client
+- [ ] Once I fork a gist, send an email to the creator that they have been posted on sapioweb.com
+- [ ] Add thank you box at bottom for originating gist creator

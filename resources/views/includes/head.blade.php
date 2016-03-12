@@ -1,4 +1,4 @@
-<title>Sapioweb | A Web Development &amp; Web Hosting Agency</title>
+<title>@yield('title') SapioWeb.com • A Smarter Development Agency</title>
 <meta charset=utf-8>
 <meta content='Sapioweb is a Web Development &amp; Web Hosting Agency suitable for any kind of business or freelance professional. Showcase your work, tell your businesses story and get noticed online.' name=description>
 <meta content='1 day' name=revisit-after>
@@ -21,6 +21,29 @@
 <meta name="msapplication-navbutton-color" content="#37474F">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#37474F">
+
+<meta property="og:title" content="@yield('title') SapioWeb.com • A Smarter Development Agency" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{Request::url()}}" />
+<meta property="og:description" content="@yield('description')" />
+<meta property="og:image" content="{{asset('images/ogImage.jpg')}}" />
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.sapioweb.com"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.sapioweb.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.sapioweb.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 
 <!-- Facebook Pixel Code -->
 <script>

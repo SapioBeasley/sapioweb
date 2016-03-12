@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', $gist->description)
+
 @section('content')
 <body class='accent top-nav'>
 	<div class=container-fluid>
