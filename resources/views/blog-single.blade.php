@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('title', $gist->description)
+@section('description', 'New gist from Andreas Beasley @sapiobeasley. Become more informed and become a better and more efficient developer')
 
 @section('content')
 <body class='accent top-nav'>
