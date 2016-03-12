@@ -10,6 +10,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="{{asset('stylesheets/font-awesome.css')}}" rel=stylesheet />
+<link href="{{asset('stylesheets/prism.css')}}" rel=stylesheet />
 <link href="{{asset('stylesheets/style.css')}}" rel=stylesheet />
 <!--[if lt IE 9]>
 <script src="javascripts/html5shiv.js"></script>
