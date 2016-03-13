@@ -27,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{Request::url()}}" />
 <meta property="og:description" content="@yield('description')" />
-<meta property="og:image" content="{{asset('images/ogImage.jpg') . '?id=' . rand()}}" />
+<meta property="og:image" content="{{asset('images/ogImage' . rand(1,4) . '.jpg') . '?id=' . rand()}}" />
 
 <!-- Piwik -->
 <script type="text/javascript">
