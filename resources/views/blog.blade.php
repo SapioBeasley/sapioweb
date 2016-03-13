@@ -64,7 +64,7 @@
 					<div class=title-block>
 						<h2>What are gists?</h2>
 					</div>
-					<p>Gists are a great way to share your work. You can share single files, parts of files, or full applications. You can access gists at https://gist.github.com. Every gist is a Git repository, which means that it can be forked, cloned, and manipulated in every way.</p>
+					<p>Gists are a great way to share your work. You can share single files, parts of files, or full applications. You can access gists at https://gist.github.com. Every gist is a Git repository, which means it can be forked, cloned, and manipulated in every way.</p>
 				</div>
 			</div>
 		</section>
