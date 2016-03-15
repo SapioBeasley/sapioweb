@@ -36,6 +36,26 @@ Route::get('/portfolio', [
 	'uses' => 'PagesController@showPortfolio'
 ]);
 
+Route::get('pages-sitemap', function () {
+	$routeCollection = Route::getRoutes();
+
+	foreach ($routeCollection as $routeKey => $value) {
+		echo $value->getPath();
+	}
+});
+
+Route::get('sitemap', function () {
+	$routeCollection = Route::getRoutes();
+
+	$sitemap = App::make("sitemap");
+
+	foreach ($routeCollection as $value) {
+		$sitemap->add($value->getPath());
+	}
+
+	return $sitemap->render('xml');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -48,5 +68,7 @@ Route::get('/portfolio', [
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+	Route::post('/contact-post', function () {
+		dd('yup');
+	});
 });
