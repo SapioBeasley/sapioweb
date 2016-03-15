@@ -36,21 +36,23 @@ Route::get('/portfolio', [
 	'uses' => 'PagesController@showPortfolio'
 ]);
 
-Route::get('pages-sitemap', function () {
-	$routeCollection = Route::getRoutes();
-
-	foreach ($routeCollection as $routeKey => $value) {
-		echo $value->getPath();
-	}
-});
-
 Route::get('sitemap', function () {
-	$routeCollection = Route::getRoutes();
+
+	$client = new \GuzzleHttp\Client();
+	$gists = $client->request('GET', env('GITHUB_API_URL') . '/users/sapiobeasley/gists');
+
+	$gists = json_decode($gists->getBody());
 
 	$sitemap = App::make("sitemap");
 
-	foreach ($routeCollection as $value) {
-		$sitemap->add($value->getPath());
+	$sitemap->add('/');
+	$sitemap->add('/contact');
+	$sitemap->add('/blog');
+	$sitemap->add('/portfolio');
+	$sitemap->add('/contact-post');
+
+	foreach ($gists as $gist) {
+		$sitemap->add('blog/' . $gist->id);
 	}
 
 	return $sitemap->render('xml');
