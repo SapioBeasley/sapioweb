@@ -45,14 +45,15 @@ Route::get('sitemap', function () {
 
 	$sitemap = App::make("sitemap");
 
-	$sitemap->add('/');
-	$sitemap->add('/contact');
-	$sitemap->add('/blog');
-	$sitemap->add('/portfolio');
-	$sitemap->add('/contact-post');
+	$mytime = Carbon\Carbon::now();
+
+	$sitemap->add(url('/'), $mytime->toDateTimeString(), '0.7', 'monthly');
+	$sitemap->add(url('/contact'), $mytime->toDateTimeString(), '0.7', 'monthly');
+	$sitemap->add(url('/blog'), $mytime->toDateTimeString(), '1.0', 'daily');
+	$sitemap->add(url('/portfolio'), $mytime->toDateTimeString(), '1.0', 'monthly');
 
 	foreach ($gists as $gist) {
-		$sitemap->add('blog/' . $gist->id);
+		$sitemap->add(url('blog/' . $gist->id), $gist->updated_at, '0.9', 'monthly');
 	}
 
 	return $sitemap->render('xml');
