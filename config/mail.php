@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'andreas@sapioweb.com', 'name' => 'Sapioweb Support'],
+    'from' => ['address' => null, 'name' => null],
 
     /*
     |--------------------------------------------------------------------------
