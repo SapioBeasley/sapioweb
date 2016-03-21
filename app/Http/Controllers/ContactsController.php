@@ -22,9 +22,9 @@ class ContactsController extends Controller
 
 			// Email Company
 			\Mail::send('emails.notifyCompany', ['visitor' => $visitor], function ($message) use($visitor) {
-				$message->from('info@sapioweb.com', 'Contact form Submission');
+				$message->from('andreas@sapioweb.com', 'Contact form Submission');
 
-				$message->to('info@sapioweb.com', 'Sapioweb.com')->subject('Contact form Submission!');
+				$message->to('andreas@sapioweb.com', 'Sapioweb.com')->subject('Contact form Submission!');
 			});
 		} catch (Exception $e) {
 
@@ -39,9 +39,9 @@ class ContactsController extends Controller
 
 			// Visitor notification
 			\Mail::send('emails.notifyVisitor', ['visitor' => $visitor], function ($message) use($visitor) {
-				$message->from('info@sapioweb.com', 'Contact form Submission');
+				$message->from('andreas@sapioweb.com', 'Contact form Submission');
 
-				$message->to('info@sapioweb.com', 'Sapioweb.com')->subject('Contact form Submission!');
+				$message->to('andreas@sapioweb.com', 'Sapioweb.com')->subject('Contact form Submission!');
 			});
 		} catch (Exception $e) {
 
