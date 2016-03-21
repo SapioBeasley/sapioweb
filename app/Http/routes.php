@@ -16,11 +16,6 @@ Route::get('/', [
 	'uses' => 'PagesController@showWelcome'
 ]);
 
-Route::get('/contact', [
-	'as' => 'contact',
-	'uses' => 'PagesController@showContact'
-]);
-
 Route::get('/blog/{id}', [
 	'as' => 'blog.single',
 	'uses' => 'PagesController@showSingleBlog'
@@ -71,7 +66,13 @@ Route::get('sitemap', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-	Route::post('/contact-post', function () {
-		dd('yup');
-	});
+	Route::get('/contact', [
+		'as' => 'contact',
+		'uses' => 'PagesController@showContact'
+	]);
+
+	Route::post('/contact-post', [
+		'as' => 'contact.post',
+		'uses' => 'ContactsController@postContact'
+	]);
 });
