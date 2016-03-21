@@ -13,7 +13,7 @@
 					<tr>
 						<td align="center">
 							<span class="editable_img">
-								<img src="http://192.168.0.6:8000/images/email-logo.png" style="display: block; width: 470px;" width="470" border="0" alt="">
+								<img src="{{asset('/images/email-logo.png')}}" style="display: block; width: 470px;" width="470" border="0" alt="">
 							</span>
 						</td>
 					</tr>
@@ -114,7 +114,7 @@
 								<tbody><tr>
 									<!-- ======= logo ======= -->
 									<td align="center">
-										<a href="" style="display: block; border-style: none !important; border: 0 !important;" class="editable_img"><img editable="true" mc:edit="footer-logo" width="119" border="0" style="display: block; width: auto;" src="http://192.168.0.6:8000/images/footer-logo.png" alt=""></a>
+										<a href="" style="display: block; border-style: none !important; border: 0 !important;" class="editable_img"><img editable="true" mc:edit="footer-logo" width="119" border="0" style="display: block; width: auto;" src="{{asset('/images/footer-logo.png')}}" alt=""></a>
 									</td>
 								</tr>
 							</tbody></table>
