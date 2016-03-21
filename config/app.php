@@ -157,7 +157,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Haleks\Markdown\MarkdownServiceProvider::class,
         Spatie\Tail\TailServiceProvider::class,
-        Roumen\Sitemap\SitemapServiceProvider::class
+        Roumen\Sitemap\SitemapServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -205,6 +206,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Markdown' => Haleks\Markdown\Facades\Markdown::class,
+        'Form' => Collective\Html\FormFacade::class,
+      'Html' => Collective\Html\HtmlFacade::class,
 
 
     ],
