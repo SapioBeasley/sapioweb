@@ -1,17 +1,29 @@
-<div class=menu-trigger>
-	<div class=bar></div>
-	<div class=bar></div>
-	<div class=bar></div>
-</div>
+<div class="pix_row row">
 
-<a class='brand transition' href='{{route('welcome')}}' style='background-image:url({{asset('images/logo.svg')}});'></a>
-
-<nav id=main>
-	<div class=nav>
-		<ul>
-			<li> <a href='{{route('portfolio')}}'>Portfolio</a></li>
-			<li> <a href='{{route('blog')}}'>Blog</a></li>
-			<li> <a class=transition href='{{route('contact')}}'>Contact</a> </li>
-		</ul>
+	<!-- === LOGO === -->
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-9">
+		<a href="{{route('welcome')}}" class="logo">
+			<img src="{{asset('images/logo.jpg')}}"  alt="logo"/>
+		</a>
 	</div>
-</nav>
+
+	<!-- === MAIN MENU === -->
+	<div class="col-lg-9 col-md-9 col-sm-9 col-xs-3">
+		<div class="slide-menu">
+			<nav>
+
+				<!-- === SHOW MENU BUTTON === -->
+				<button data-toggle="offcanvas" class="hamburger is-closed" type="button">
+					<span class="hamb-top"></span>
+					<span class="hamb-middle"></span>
+					<span class="hamb-bottom"></span>
+				</button>
+
+				<!-- === MENU ITEMS === -->
+				<ul class="main-menu">
+					@include('includes.nav')
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>

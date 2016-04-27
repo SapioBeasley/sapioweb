@@ -10,4 +10,3 @@
 <script src="{{asset('javascripts/tera-slider.js')}}"></script>
 <script src="{{asset('javascripts/tera-lightbox.js')}}"></script>
 <script src="{{asset('javascripts/functions.js')}}"></script>
-<script src="{{asset('javascripts/prism.js')}}"></script>

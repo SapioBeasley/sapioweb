@@ -75,4 +75,15 @@ Route::group(['middleware' => ['web']], function () {
 		'as' => 'contact.post',
 		'uses' => 'ContactsController@postContact'
 	]);
+
+
+	Route::get('/inquire', [
+		'as' => 'inquire',
+		'uses' => 'PagesController@showInquire'
+	]);
+
+	Route::post('/inquire-post', [
+		'as' => 'inquire.post',
+		'uses' => 'ContactsController@postInquire'
+	]);
 });

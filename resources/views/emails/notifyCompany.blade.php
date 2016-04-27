@@ -66,7 +66,25 @@
 										<div class="editable_text" style="line-height: 24px">
 											<span class="text-placeholder">
 
-				        						Mauris lorem dolor, porttitor et pharetra in, gravida sed tortor. Aliquam eleifend ac nisl quis consequat. Duis at scelerisque risus, nec tempus tortor. Fusce tincidunt tellus  dolor sit amet consectetur.
+
+
+
+
+
+
+
+
+{{$visitor['username']}}
+{{$visitor['email']}}
+{{$visitor['subject']}}
+{{$visitor['comment']}}
+
+
+
+
+
+
+
 
 											</span>
 										</div>

@@ -1,0 +1,1 @@
+inquire.blade.php

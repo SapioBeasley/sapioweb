@@ -11,7 +11,7 @@ class ContactsController extends Controller
 	public function postContact(Request $request)
 	{
 		$this->notifyCompany($request->all());
-		$this->notifyVisitor($request->all());
+		// $this->notifyVisitor($request->all());
 
 		return redirect()->back()->with('success_message', 'We have recived your message. We will be in contact shortly');
 	}

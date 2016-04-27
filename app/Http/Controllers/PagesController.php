@@ -10,7 +10,11 @@ class PagesController extends Controller
 {
    	public function showWelcome()
    	{
-    		return view('welcome');
+   		$portfolios = \App\Portfolio::take(6)->get();
+
+    		return view('home')->with([
+    			'portfolios' => $portfolios
+    		]);
 	}
 
 	public function showContact()
@@ -18,13 +22,15 @@ class PagesController extends Controller
     		return view('contact');
 	}
 
+	public function showInquire()
+	{
+    		return view('inquire');
+	}
+
 	public function showBlog()
 	{
-		$client = new \GuzzleHttp\Client();
+		$gists = $this->getGistsTransform('GET', env('GITHUB_API_URL') . '/users/sapiobeasley/gists');
 
-		$gists = $client->request('GET', env('GITHUB_API_URL') . '/users/sapiobeasley/gists');
-
-		$gists = json_decode($gists->getBody());
 
 		return view('blog')->with([
 			'gists' => $gists
@@ -44,8 +50,42 @@ class PagesController extends Controller
 		]);
 	}
 
+	public function getGistsTransform($method, $uri)
+	{
+		$client = new \GuzzleHttp\Client();
+
+		// $limit = $client->request('GET', env('GITHUB_API_URL') . '/rate_limit');
+		// $limit = json_decode($limit->getBody());
+		// dd($limit);
+
+		$gists = $client->request($method, $uri);
+
+		$gists = json_decode($gists->getBody());
+
+		// foreach ($gists as $gistKey => $gist) {
+		// 	foreach($gist->files as $fileKey => $fileName)
+		// 	{
+		// 		$gistContent = $client->request('GET', env('GITHUB_API_URL') . '/gists/' .  $gist->id);
+
+		// 		$gistContent = json_decode($gistContent->getBody());
+
+		// 		$gistContent = $gistContent->files->{$fileKey}->content;
+
+		// 		$gistSnippet = strlen($gistContent) > 50 ? substr($gistContent,0,50)."..." : $gistContent;
+
+		// 		$gistSnippet[$gistKey] = $gistSnippet;
+		// 	}
+		// }
+
+		return $gists;
+	}
+
 	public function showPortfolio ()
 	{
-		abort(503);
+   		$portfolios = \App\Portfolio::all();
+
+		return view('portfolio')->with([
+			'portfolios' => $portfolios
+		]);
 	}
 }
