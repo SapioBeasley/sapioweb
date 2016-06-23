@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/sapioweb":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/sapioweb","hostpath":"/Users/andreasbeasley/sites/sapioweb","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/andreasbeasley/sites/sapioweb","disabled":false,"__vagrantfile":true}}}
