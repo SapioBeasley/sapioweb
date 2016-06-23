@@ -12,9 +12,9 @@ class PagesController extends Controller
    	{
    		$portfolios = \App\Portfolio::take(6)->get();
 
-    		return view('home')->with([
-    			'portfolios' => $portfolios
-    		]);
+		return view('home')->with([
+			'portfolios' => $portfolios
+		]);
 	}
 
 	public function showContact()

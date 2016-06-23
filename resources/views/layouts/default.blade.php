@@ -1,71 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	@include('includes.head')
-</head>
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		@include('includes.head')
+	</head>
 
-<body>
+	<body id="page-top">
 
-<!-- Loader -->
-<div id="page-preloader"><span class="spinner"></span></div>
-<!-- Loader end -->
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-<div class="container">
 
-<div class="header">
-  @include('includes.header')
-</div>
+		<!-- ========== Preloader ========== -->
 
-@yield('content')
+		<div class="preloader">
+		  <img src="{{url('assets/images/loader.svg')}}" alt="Loading...">
+		</div>
 
-<footer class="footer divider-right-bot divider-right-bot-footer">
-	@include('includes.footer')
-</footer>
+		@yield('content')
 
-<aside id="mobile-menu">
+		@include('includes.footer')
 
-  <!-- === SLIDE MENU === -->
-  <ul id="left-menu" class="left-menu">
-    @include('includes.nav')
-  </ul>
+		@yield('scripts')
 
-</aside>
-
-<div class="black-overlay" id="black-overlay"></div>
-
-</div>
-
-<!-- LIBRARIES -->
-
-<script src="{{asset('js/jquery-1.11.1.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery-migrate-1.2.1.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery-ui.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/bootstrap-3.1.1.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/modernizr.custom.js')}}" type="text/javascript"></script>
-
-<!-- AZERO-->
-
-<script src="{{asset('plugins/azero/azexo_reveals.min.js')}}"></script>
-<script src="{{asset('plugins/azero/easejs.js')}}"></script>
-<script src="{{asset('plugins/azero/tweenjs.js')}}"></script>
-<script src="{{asset('plugins/azero/azexo_reveals.min.js')}}"></script>
-<script src="{{asset('plugins/azero/azexo_transitions.min.js')}}"></script>
-
-<script type="text/javascript" src="{{asset('plugins/sliderpro/js/jquery.sliderPro.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('plugins/isotope/jquery.isotope.min.js')}}"></script>
-<script src="{{asset('plugins/owl-carousel/owl.carousel.min.js')}}"></script>
-
-<script src="{{asset('js/waypoints.min.js')}}"></script>
-<script src="{{asset('plugins/magnific/jquery.magnific-popup.js')}}"></script>
-<script src="{{asset('js/metisMenu.min.js')}}"></script>
-<script src="{{asset('js/jquery.form-validator.min.js')}}"></script>
-<script src="{{asset('js/classie.js')}}"></script>
-<script src="{{asset('js/cssua.min.js')}}"></script>
-
-<!-- CUSTOM SCRIPT -->
-<script src="{{asset('js/custom.js')}}"></script>
-
-@yield('scripts')
-
-</body>
+	</body>
 </html>
