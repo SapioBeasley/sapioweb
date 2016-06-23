@@ -12,7 +12,8 @@
         "spatie/laravel-tail": "^1.1",
         "predis/predis": "~1.0",
         "roumen/sitemap": "^2.6",
-        "laravelcollective/html": "5.2.*"
+        "laravelcollective/html": "5.2.*",
+        "laravel/homestead": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
