@@ -2,7 +2,7 @@
 
 @section('title', 'Hosting Service')
 
-@section('subheading', 'see what we are up to')
+@section('subheading', 'What is web hosting')
 
 @section('content')
 
@@ -16,25 +16,17 @@
                 <span class="subheading">@yield('subheading')</span>
             </header>
 
-            <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae, ex fugit vero, earum quibusdam exercitationem impedit voluptas officiis placeat, reiciendis totam dolore atque ipsam incidunt quasi. Fugiat, doloribus, quia!</p>
-            </div>
-            <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae, ex fugit vero, earum quibusdam exercitationem impedit voluptas officiis placeat, reiciendis totam dolore atque ipsam incidunt quasi. Fugiat, doloribus, quia!</p>
-            </div>
-            <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae, ex fugit vero, earum quibusdam exercitationem impedit voluptas officiis placeat, reiciendis totam dolore atque ipsam incidunt quasi. Fugiat, doloribus, quia!</p>
-            </div>
-        </div><!-- / .row -->
+            <div class="col-md-12">
+                <p>Hosting (also known as Web site hosting, Web hosting, and Webhosting) is the business of housing, serving, and maintaining files for one or more Web sites. More important than the computer space that is provided for Web site files is the fast connection to the Internet. Most hosting services offer connections on T-carrier system lines. Typically, an individual business hosting its own site would require a similar connection and it would be expensive. Using a hosting service lets many companies share the cost of a fast Internet connection for serving files.</p>
 
-        <div class="row">
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, pariatur, libero. Necessitatibus, eveniet, voluptatibus. Voluptatum dolorem nihil cum magnam eveniet impedit veniam assumenda nostrum, sequi accusamus, molestias expedita soluta fugit distinctio quisquam! Molestias adipisci dolores voluptas pariatur ut, modi, consectetur possimus nam ipsum a. Ratione.</p>
+                <p>A number of Internet access providers, such as America Online, offer subscribers free space for a small Web site that is hosted by one of their computers. Geocities is a Web site that offers registered visitors similar free space for a Web site. While these services are free, they are also very basic.</p>
+
+                <p>A number of hosting companies describe their services as virtual hosting. Virtual hosting usually implies that their services will be transparent and that each Web site will have its own domain name and set of e-mail addresses. In most usages, hosting and virtual hosting are synonyms. Some hosting companies let you have your own virtual server, the appearance that you are controlling a server that is dedicated entirely to your site.</p>
+
+                <p>Dedicated hosting is the provision of a dedicated server machine that is dedicated to the traffic to your Web site. Only very busy sites require dedicated hosting. Many companies purchase their own servers and place them on a site that provides fast access to the Internet. This practice is called colocation.</p>
             </div>
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, pariatur, libero. Necessitatibus, eveniet, voluptatibus. Voluptatum dolorem nihil cum magnam eveniet impedit veniam assumenda nostrum, sequi accusamus, molestias expedita soluta fugit distinctio quisquam! Molestias adipisci dolores voluptas pariatur ut, modi, consectetur possimus nam ipsum a. Ratione.</p>
-            </div>
-        </div>
+
+        </div><!-- / .row -->
     </section><!-- / .container -->
 
 @endsection
