@@ -12,23 +12,68 @@
 */
 
 Route::get('/', [
-	'as' => 'welcome',
-	'uses' => 'PagesController@showWelcome'
+	'as' => 'home',
+	'uses' => 'HomesController@showHome'
 ]);
 
 Route::get('/blog/{id}', [
 	'as' => 'blog.single',
-	'uses' => 'PagesController@showSingleBlog'
+	'uses' => 'BlogsController@showSingleBlog'
 ]);
 
 Route::get('/blog', [
 	'as' => 'blog',
-	'uses' => 'PagesController@showBlog'
+	'uses' => 'BlogsController@showBlog'
 ]);
 
 Route::get('/portfolio', [
 	'as' => 'portfolio',
-	'uses' => 'PagesController@showPortfolio'
+	'uses' => 'PortfoliosController@showPortfolio'
+]);
+
+Route::get('/services', [
+	'as' => 'services',
+	'uses' => 'ServicesController@showServices'
+]);
+
+Route::get('/services/design-development', [
+	'as' => 'services.development',
+	'uses' => 'ServicesController@showServicesDevelopment'
+]);
+
+Route::get('/services/hosting', [
+	'as' => 'services.hosting',
+	'uses' => 'ServicesController@showHosting'
+]);
+
+Route::get('/services/maintinance-support', [
+	'as' => 'services.maintinance',
+	'uses' => 'ServicesController@showServicesMaintinance'
+]);
+
+Route::get('/contact', [
+	'as' => 'contact',
+	'uses' => 'ContactsController@showContact'
+]);
+
+Route::post('/contact', [
+	'as' => 'contact.post',
+	'uses' => 'ContactsController@postContact'
+]);
+
+Route::post('/newsletter', [
+	'as' => 'newsletter.post',
+	'uses' => 'NewslettersController@postNewsletter'
+]);
+
+Route::get('/inquire', [
+	'as' => 'inquire',
+	'uses' => 'PagesController@showInquire'
+]);
+
+Route::post('/inquire-post', [
+	'as' => 'inquire.post',
+	'uses' => 'ContactsController@postInquire'
 ]);
 
 Route::get('sitemap', function () {
@@ -52,27 +97,4 @@ Route::get('sitemap', function () {
 	}
 
 	return $sitemap->render('xml');
-});
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
-
-Route::group(['middleware' => ['web']], function () {
-	Route::get('/contact', [
-		'as' => 'contact',
-		'uses' => 'PagesController@showContact'
-	]);
-
-	Route::post('/contact-post', [
-		'as' => 'contact.post',
-		'uses' => 'ContactsController@postContact'
-	]);
 });

@@ -8,43 +8,32 @@ use App\Http\Requests;
 
 class ContactsController extends Controller
 {
+	public function showContact()
+	{
+		return view('contact');
+	}
+
 	public function postContact(Request $request)
 	{
-		$this->notifyCompany($request->all());
-		$this->notifyVisitor($request->all());
+        $notifyCompany = $this->notifyCompany($request->all());
+		$notifyCompany = $this->notifyVisitor($request->all());
 
-		return redirect()->back()->with('success_message', 'We have recived your message. We will be in contact shortly');
+		return response()->json('Thank you for getting in contact. We will be in contact soon', 200);
 	}
 
 	public function notifyCompany($visitor)
 	{
-		try {
-
-			// Email Company
-			\Mail::send('emails.notifyCompany', ['visitor' => $visitor], function ($message) use($visitor) {
-				$message->from('andreas@sapioweb.com', 'Contact form Submission');
-
-				$message->to('andreas@sapioweb.com', 'Sapioweb.com')->subject('Contact form Submission!');
-			});
-		} catch (Exception $e) {
-
-		}
-
-		return;
+		// Email Company
+		\Mail::queue('emails.notifyCompany', $visitor, function ($message) {
+			$message->to(\Config::get('mail.from.address'))->subject('Contact form Submission!');
+		});
 	}
 
 	public function notifyVisitor($visitor)
 	{
-		try {
-
-			// Visitor notification
-			\Mail::send('emails.notifyVisitor', ['visitor' => $visitor], function ($message) use($visitor) {
-				$message->from('andreas@sapioweb.com', 'Contact form Submission');
-
-				$message->to('andreas@sapioweb.com', 'Sapioweb.com')->subject('Contact form Submission!');
-			});
-		} catch (Exception $e) {
-
-		}
+		// Visitor notification
+		\Mail::queue('emails.notifyVisitor', $visitor, function ($message) use ($visitor) {
+			$message->to($visitor['email'])->subject('Thank you for contacting Sapioweb!');
+		});
 	}
 }

@@ -1,80 +1,59 @@
 @extends('layouts.default')
 
+@section('title', 'Blog')
+
+@section('subheading', 'see what we are up to')
+
+@section('breadcrumbs')
+
+	<li><a href="{{url('/')}}">Home</a></li>
+	<li class="active">Blog</li>
+
+@endsection
+
 @section('content')
-<body class='dark top-nav'>
-	<div class=container-fluid>
-		<header data-spy=affix>
-			@include('includes.header')
-		</header>
 
-		<section class=gray>
-			<div class=row>
-				<div class='col-md-4 mobile-center'>
-					<h4 class=subtitle>Gists + Headlines</h4>
-					<h2>The Blog</h2>
-				</div>
-				<div class=col-md-8>
-					<p>There are lots of great blogs for developers, but none for the best and most useful gists from github. Here we highlight some of the greats that we currently use.</p>
-				</div>
-			</div>
-		</section>
+	@include('includes.breadcrumbs')
 
-		<section class=top-line>
-			<!-- <div class=row>
-				<div class=col-md-12>
-					<div class='filter-container stick' data-spy=affix> <div class=filter-trigger>Categories</div> <ul class=filters> <li> <button data-filter='*'>All</button> </li> <li> <button data-filter='.threedee'>3D</button> </li> <li> <button data-filter='.abstract'>Abstract</button> </li> <li> <button data-filter='.typography'>Typography</button> </li> </ul> </div>
-				</div>
-			</div> -->
-			<div class='col-3 blog' id=grid>
+	<!-- ========== Blog - 3 Columns ========== -->
 
-				@foreach ($gists as $gist)
-					<a class='item transition threedee' href='{{route('blog.single', $gist->id)}}'>
-						<!-- <div class=thumb>
-							<img alt="" src="images/work/01.jpg"/>
-							<div class=excerpt>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus accumsan leo, nec congue risus feugiat ac.
-							</div>
-						</div> -->
-						<div class=caption>
-							<h5 class=extra>{{$gist->created_at}}</h5>
-							<div class=titles>
-								<h3 class=title>{{$gist->description}}</h3>
-							</div>
-						</div>
-					</a>
-				@endforeach
+	<div id="blog" class="section container blog-columns">
 
-			</div>
-			 <!-- <div class=row>
-			 	<div class='col-md-offset-3 col-md-6 text-center'>
-			 		<div class=btn-group role=group>
-			 			<button type=button class="btn btn-xs btn-default active">1</button>
-			 			<button type=button class="btn btn-xs btn-default">2</button>
-			 			<button type=button class="btn btn-xs btn-default">3</button>
-			 			<button type=button class="btn btn-xs btn-default">4</button>
-			 		</div>
-			 	</div>
-			 </div> -->
+		<div class="row ws-s">
 
-		</section>
+			@foreach($gists as $gist)
+				@include('includes.blogLoop')
+			@endforeach
 
-		<section class=gray>
-			<div class=row>
-				<div class='col-md-6 col-md-offset-3 text-center'>
-					<div class=title-block>
-						<h2>What are gists?</h2>
-					</div>
-					<p>Gists are a great way to share your work. You can share single files, parts of files, or full applications. You can access gists at https://gist.github.com. Every gist is a Git repository, which means it can be forked, cloned, and manipulated in every way.</p>
-				</div>
-			</div>
-		</section>
+		</div><!-- / .row -->
 
-		@include('includes.footer')
+		@include('includes.pagination')
 
-	</div>
-</body>
+	</div><!-- / .blog-columns -->
+
 @endsection
 
 @section('scripts')
-	@include('includes.commonScripts')
+
+	<!-- ========== Scripts ========== -->
+
+	<script src="../../assets/js/vendor/jquery-2.1.4.min.js"></script>
+	<script src="../../assets/js/vendor/google-fonts.js"></script>
+	<script src="../../assets/js/vendor/jquery.easing.js"></script>
+	<script src="../../assets/js/vendor/jquery.waypoints.min.js"></script>
+	<script src="../../assets/js/vendor/bootstrap.min.js"></script>
+	<script src="../../assets/js/vendor/bootstrap-hover-dropdown.min.js"></script>
+	<script src="../../assets/js/vendor/smoothscroll.js"></script>
+	<script src="../../assets/js/vendor/jquery.localScroll.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.scrollTo.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.stellar.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.parallax.js"></script>
+	<script src="../../assets/js/vendor/slick.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.easypiechart.min.js"></script>
+	<script src="../../assets/js/vendor/countup.min.js"></script>
+	<script src="../../assets/js/vendor/isotope.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.magnific-popup.min.js"></script>
+	<script src="../../assets/js/vendor/wow.min.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
 @endsection

@@ -1,29 +1,51 @@
 @extends('layouts.default')
 
 @section('content')
-	<body class='accent top-nav'>
-		<div class=container-fluid>
 
-			<header data-spy=affix>
-				@include('includes.header')
-			</header>
+	@include('includes.header')
 
-			<section class='jumbotron small'>
-				<div class='bg faded animated' style='background-image: url(https://source.unsplash.com/random);'></div>
-				<div class='row vcenter'>
-					<div class='col-md-12 text-center'>
-						<h1>404</h1>
-						<h3>Error. Page not found.</h3>
-					</div>
-				</div>
-			</section>
+	<!-- ========== 404 Page - (Not Found) ========== -->
 
-			@include('includes.footer')
+	<div class="wrapper-404">
+		<div class="content-wrapper">
+
+			<div class="lead-wrapper">
+				<h1 class="lead-404">404</h1>
+			</div>
+
+			<div class="info-wrapper">
+				<p class="info-404">Oops... The page that you are looking<br> for does not exist! Luckily enough we,<br> have some pages that do exist</p>
+			</div>
+
+			<ul class="links-404">
+				<li><a href="{{route('home')}}" class="btn btn-light btn-small">Go Back Home</a></li>
+				<li><a href="{{route('services')}}" class="btn-ghost-light btn-small">View Services</a></li>
+			</ul>
 
 		</div>
-	</body>
+	</div><!-- / .wrapper-404 -->
+
 @endsection
 
 @section('scripts')
-	@include('includes.commonScripts')
+
+	<!-- ========== Scripts ========== -->
+
+	<script src="{{url('assets/js/vendor/jquery-2.1.4.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/google-fonts.js')}}"></script>
+	<script src="{{url('assets/js/vendor/jquery.easing.js')}}"></script>
+	<script src="{{url('assets/js/vendor/jquery.waypoints.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/bootstrap-hover-dropdown.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/smoothscroll.js')}}"></script>
+	<script src="{{url('assets/js/vendor/jquery.localScroll.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/jquery.scrollTo.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/jquery.stellar.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/jquery.parallax.js')}}"></script>
+	<script src="{{url('assets/js/vendor/slick.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/isotope.min.js')}}"></script>
+	<script src="{{url('assets/js/vendor/wow.min.js')}}"></script>
+	<script src="{{url('assets/js/main.js')}}"></script>
+	{{-- @include('includes.commonScripts') --}}
+
 @endsection
