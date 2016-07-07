@@ -1,33 +1,65 @@
 @extends('layouts.default')
 
+@section('title', 'Contact')
+
+@section('subheading', 'LOVE TO HEAR FROM YOU')
+
+@section('breadcrumbs')
+
+	<li><a href="{{url('/')}}">Home</a></li>
+	<li class="active">Contact</li>
+
+@endsection
+
 @section('content')
-<main class="section" id="main">
-	<div class="pix_row row contact-info">
 
-		<!-- === CONTACTS FORM === -->
-		<!-- <div class="col-lg-8 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-8 col-sm-offset-4 col-xs-12"> -->
-		<div class="col-md-12">
-			<div class="contact-form">
-				@include('forms.contactForm')
-				<div class="send-result"></div>
+	@include('includes.breadcrumbs')
+
+    <!-- ========== Contact ========== -->
+
+    <section id="contact" class="contact-3">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12 col-lg-offset-2 col-lg-8">
+					<div class="form-wrapper">
+						<div class="from-header">
+							<h2>Get in touch</h2>
+							<p>Have a project you would like us to consider or just want to say hello? We would love to hear from you. Use the form below to describe your project and contact us. We promise to get in touch with you shortly.</p>
+						</div>
+
+						@include('forms.contactForm')
+
+					</div>
+				</div>
+
 			</div>
-		</div>
+		</div><!-- / .container -->
+    </section><!-- / .contact-3 -->
 
-	</div>
-
-</main>
-<!-- =========================
-	END MAIN CONTENT
-============================== -->
 @endsection
 
 @section('scripts')
 
-<!-- OTHER SCRIPTS -->
-<script src="plugins/letters/jquery.shuffleLetters.js"></script>
-<script src="plugins/letters/jquery.tickertype.js"></script>
-<script src="plugins/scrollreveal/scrollreveal.min.js"></script>
+	<!-- ========== Scripts ========== -->
 
-<!-- GOOGLE MAP API -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAHDFaUVFTKqrrUtBXubJbrUxKKq-t8Fw&amp;callback=initMap" async defer></script> -->
+	<script src="{{url('/assets/js/vendor/jquery-2.1.4.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/google-fonts.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.easing.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.waypoints.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/bootstrap.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/bootstrap-hover-dropdown.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/smoothscroll.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.localScroll.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.scrollTo.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.stellar.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.parallax.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/slick.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.easypiechart.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/countup.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/isotope.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/jquery.magnific-popup.min.js')}}"></script>
+	<script src="{{url('/assets/js/vendor/wow.min.js')}}"></script>
+	<script src="{{url('/assets/js/main.js')}}"></script>
+
 @endsection

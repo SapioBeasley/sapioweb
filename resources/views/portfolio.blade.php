@@ -1,37 +1,66 @@
 @extends('layouts.default')
 
+@section('title', 'Portfolio')
+
+@section('subheading', 'Some of our work')
+
+@section('breadcrumbs')
+
+	<li><a href="{{url('/')}}">Home</a></li>
+	<li class="active">Portfolio</li>
+
+@endsection
+
 @section('content')
-<main class="section" id="main">
 
-    <!-- <div class="text-left filter " >
-		<ul id="filter" class="clearfix">
-			<li class="title-action"><a href="09-portfolio.html" class="current btn" data-filter="*">All Works</a></li>
-			<li><a href="09-portfolio.html" class="btn" data-filter=".cat01">Design</a></li>
-			<li><a href="09-portfolio.html" class="btn" data-filter=".cat02">Motion</a></li>
-			<li><a href="09-portfolio.html" class="btn" data-filter=".cat03">Illustration</a></li>
-			<li><a href="09-portfolio.html" class="btn" data-filter=".cat04">Print</a></li>
-			<li><a href="09-portfolio.html" class="btn" data-filter=".cat05">Web</a></li>
-		</ul>
-	</div> -->
+	@include('includes.breadcrumbs')
 
-	<div class="isotope-frame animated" data-animation="bounceInUp">
-		<div class="isotope-filter isotope-skin2 isotope-nopadding ">
+	<!-- ========== Portfolio Boxed - 2 Columns ========== -->
 
-			@foreach($portfolios as $portfolio)
-				@include('includes.portfolioLoop')
-			@endforeach
+	<section class="container portfolio-layout portfolio-columns-boxed">
+		<div class="row">
+			<header class="sec-heading">
+				<h2>Some of our projects</h2>
+				<span class="subheading">A collection of our web design and development work</span>
+			</header>
+		</div><!-- / .row -->
 
-		</div>
-	</div>
+		<div class="row ws-m">
+			<div id="pfolio">
 
-</main>
+				@foreach($portfolios as $portfolio)
+					@include('includes.portfolioLoop')
+				@endforeach
+
+			</div><!-- / #pfolio -->
+		</div><!-- / .row -->
+	</section><!-- / .portfolio-columns-boxed -->
+
+	@include('includes.contactCta')
+
 @endsection
 
 @section('scripts')
 
-<!-- OTHER SCRIPTS -->
-<script src="{{asset('plugins/letters/jquery.shuffleLetters.js')}}"></script>
-<script src="{{asset('plugins/letters/jquery.tickertype.js')}}"></script>
-<script src="{{asset('plugins/scrollreveal/scrollreveal.min.js')}}"></script>
+	<!-- ========== Scripts ========== -->
+
+	<script src="../../assets/js/vendor/jquery-2.1.4.min.js"></script>
+	<script src="../../assets/js/vendor/google-fonts.js"></script>
+	<script src="../../assets/js/vendor/jquery.easing.js"></script>
+	<script src="../../assets/js/vendor/jquery.waypoints.min.js"></script>
+	<script src="../../assets/js/vendor/bootstrap.min.js"></script>
+	<script src="../../assets/js/vendor/bootstrap-hover-dropdown.min.js"></script>
+	<script src="../../assets/js/vendor/smoothscroll.js"></script>
+	<script src="../../assets/js/vendor/jquery.localScroll.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.scrollTo.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.stellar.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.parallax.js"></script>
+	<script src="../../assets/js/vendor/slick.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.easypiechart.min.js"></script>
+	<script src="../../assets/js/vendor/countup.min.js"></script>
+	<script src="../../assets/js/vendor/isotope.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.magnific-popup.min.js"></script>
+	<script src="../../assets/js/vendor/wow.min.js"></script>
+	<script src="../../assets/js/main.js"></script>
 
 @endsection

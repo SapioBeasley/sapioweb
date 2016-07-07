@@ -1,51 +1,59 @@
 @extends('layouts.default')
 
+@section('title', 'Blog')
+
+@section('subheading', 'see what we are up to')
+
+@section('breadcrumbs')
+
+	<li><a href="{{url('/')}}">Home</a></li>
+	<li class="active">Blog</li>
+
+@endsection
+
 @section('content')
-<!-- =========================
-    MAIN CONTENT
-============================== -->
-<main class="section" id="main">
-	@foreach ($gists as $gist)
-		<!-- === BLOG ITEM === -->
-		<div class="pix_row row scrollreveal">
 
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="blog-info">
-					<h5 class="blog-title"><a href="{{route('blog.single', $gist->id)}}">{{$gist->description}}</a></h5>
-					<div  class="blog-content">
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p> -->
-					</div>
-					<div class="blog-data">
-						<div class="pull-left">@include('includes.postedOn')</div>
-					</div>
-				</div>
-			</div>
+	@include('includes.breadcrumbs')
 
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="blog-thumb"><a href="07-blog-post.html"><img src="http://source.unsplash.com/random/600x300?nature={{rand(1,99)}}" alt="galliope"></a></div>
-			</div>
+	<!-- ========== Blog - 3 Columns ========== -->
 
-		</div>
-	@endforeach
+	<div id="blog" class="section container blog-columns">
 
-	<!-- === BLOG PAGINATION === -->
-	<!-- <div class="pix_row row">
-		<div class="pix-pagination">
-			Pages: &nbsp; <strong>1</strong><a href="06-blog-main.html#">2</a><a href="06-blog-main.html#">3</a>
-		</div>
-	</div> -->
+		<div class="row ws-s">
 
-</main>
-<!-- =========================
-	END MAIN CONTENT
-============================== -->
+			@foreach($gists as $gist)
+				@include('includes.blogLoop')
+			@endforeach
+
+		</div><!-- / .row -->
+
+		@include('includes.pagination')
+
+	</div><!-- / .blog-columns -->
+
 @endsection
 
 @section('scripts')
 
-<!-- OTHER SCRIPTS -->
-<script src="plugins/letters/jquery.shuffleLetters.js"></script>
-<script src="plugins/letters/jquery.tickertype.js"></script>
-<script src="plugins/scrollreveal/scrollreveal.min.js"></script>
+	<!-- ========== Scripts ========== -->
+
+	<script src="../../assets/js/vendor/jquery-2.1.4.min.js"></script>
+	<script src="../../assets/js/vendor/google-fonts.js"></script>
+	<script src="../../assets/js/vendor/jquery.easing.js"></script>
+	<script src="../../assets/js/vendor/jquery.waypoints.min.js"></script>
+	<script src="../../assets/js/vendor/bootstrap.min.js"></script>
+	<script src="../../assets/js/vendor/bootstrap-hover-dropdown.min.js"></script>
+	<script src="../../assets/js/vendor/smoothscroll.js"></script>
+	<script src="../../assets/js/vendor/jquery.localScroll.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.scrollTo.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.stellar.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.parallax.js"></script>
+	<script src="../../assets/js/vendor/slick.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.easypiechart.min.js"></script>
+	<script src="../../assets/js/vendor/countup.min.js"></script>
+	<script src="../../assets/js/vendor/isotope.min.js"></script>
+	<script src="../../assets/js/vendor/jquery.magnific-popup.min.js"></script>
+	<script src="../../assets/js/vendor/wow.min.js"></script>
+	<script src="../../assets/js/main.js"></script>
 
 @endsection

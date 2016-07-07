@@ -50,12 +50,12 @@
 /* --------------------------------------------------
 	Navigation | Navbar
 -------------------------------------------------- */
-	
+
 	function initNavbar(){
 
 		// Sticky Nav & Transparent Background
 		$(window).scroll(function(){
-			
+
 			if ($(window).scrollTop() > 20) {
 				$('nav').removeClass('navbar-trans', 300);
 				$('nav').removeClass('navbar-trans-dark');
@@ -78,7 +78,7 @@
 		// Nav on mobile screens
 		$(window).resize(function() {
 	        if ($(window).width() <= 1259) {
-				$('nav').addClass('mobile-nav');		        
+				$('nav').addClass('mobile-nav');
 		    } else {
 		    	$('nav').removeClass('mobile-nav');
 		    }
@@ -95,7 +95,7 @@
     		// Remove dropdown open on hover for small screens
     		if ($('nav').hasClass('mobile-nav')) {
 
-    			$('.dropdown-toggle').on('mouseover', function(e){    
+    			$('.dropdown-toggle').on('mouseover', function(e){
     			        e.preventDefault();
 
     			        $('.dropdown').removeClass('open');
@@ -109,7 +109,7 @@
 
     		if (!$('.nav a').hasClass('dropdown-toggle')) {
 
-    			$('.nav a').on('click', function(){ 
+    			$('.nav a').on('click', function(){
 			        if($('.navbar-toggle').css('display') !='none'){
 			            $(".navbar-toggle").trigger( "click" );
 			        }
@@ -139,7 +139,7 @@
 
 		$('#page-top').localScroll({
 			easing: 'easeInOutExpo'
-		});	
+		});
 	} // initScroller
 
 
@@ -149,7 +149,7 @@
 	Parallax
 -------------------------------------------------- */
 
-	
+
 	function initParallax () {
 
 		var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -163,7 +163,7 @@
 			$(".testimonials-parallaxx").parallax("50%", 0.4);
 			$(".twitter-slider").parallax("50%", 0.4);
 			$(".login-2").parallax("50%", 0.2);
-		}		
+		}
 	}
 
 
@@ -173,7 +173,7 @@
 -------------------------------------------------- */
 
 	function initCountCirc() {
-		
+
 		var hasCircles = $('#skillsCircles').hasClass('circles-counters');
 
 		if (hasCircles) {
@@ -186,7 +186,7 @@
 					  useEasing : true,
 					  separator : ''
 					};
-					
+
 					$('.chart').easyPieChart({
 						size: '150',
 						lineWidth: 2,
@@ -197,7 +197,7 @@
 					    easing: 'easeOutBack',
 					    animate: {
 					    	duration: 1600,
-					    	enabled: true 
+					    	enabled: true
 					    }
 					});
 					// init only once
@@ -213,7 +213,7 @@
 
 
 	function initCountCircMin() {
-		
+
 		var hasCircles = $('#skillsCirclesMin').hasClass('circles-counters-dark-bg');
 
 		if (hasCircles) {
@@ -226,7 +226,7 @@
 					  useEasing : true,
 					  separator : ''
 					};
-					
+
 					$('.chart').easyPieChart({
 						size: '150',
 						lineWidth: 2,
@@ -237,7 +237,7 @@
 					    easing: 'easeOutBack',
 					    animate: {
 					    	duration: 1600,
-					    	enabled: true 
+					    	enabled: true
 					    }
 					});
 					// init only once
@@ -269,7 +269,7 @@
 
 			    	var options = {
 						useEasing : true,
-						useGrouping : true, 
+						useGrouping : true,
 						separator : ','
 					};
 					// Counter 1
@@ -291,7 +291,7 @@
 			});
 
 		}
-		
+
 
 	} // initCountNbr
 
@@ -330,7 +330,7 @@
 			});
 
 		}
-		
+
 
 	} // initCountMin
 
@@ -339,7 +339,7 @@
 /* --------------------------------------------------
 	Sliders
 -------------------------------------------------- */
-	
+
 	function initSliders() {
 
 		// Features Slider
@@ -506,7 +506,7 @@
 /* --------------------------------------------------
 	Portfolio
 -------------------------------------------------- */
-	
+
 	function initPortfolio () {
 
 		// Filters
@@ -517,10 +517,10 @@
 			  $(this).parent().addClass('active');
 		});
 
-		
+
 		// Full Width Gallery (3 columns)
 		function pfolio3colFW () {
-			
+
 			var $container = $('#pfolio');
 			// init
 			$container.isotope({
@@ -538,7 +538,7 @@
 
 
 		function pfolioMasonry () {
-			
+
 			var $container = $('.pfolio-items');
 			// init
 			$container.isotope({
@@ -548,7 +548,7 @@
 			    layoutMode: 'packery',
 			    masonry: {
 			      columnWidth: '.grid-sizer'
-			    }				
+			    }
 			});
 
 			// Filter items
@@ -584,7 +584,7 @@
 				    enabled: true
 				  }
 			});
-			
+
 		}
 
 		// Footer Gallery Lightbox
@@ -607,7 +607,7 @@
 		if (hasVideoPopup) {
 
 			$('.popup-video').magnificPopup({
-	          	disableOn: 700, 
+	          	disableOn: 700,
 	         	type: 'iframe',
 	          	mainClass: 'mfp-fade',
 	          	removalDelay: 160,
@@ -637,7 +637,7 @@
 				percentPosition: true
 			});
 	}
-	
+
 
 
 
@@ -664,7 +664,7 @@
 -------------------------------------------------- */
 
 	function initAnimation () {
-		
+
 		new WOW().init();
 
 	}
@@ -687,7 +687,7 @@
 			$('.player').YTPlayer();
 
 		}
-		
+
 
 	}
 
@@ -697,7 +697,7 @@
 	Ken Burns Slider
 -------------------------------------------------- */
 	function initKenburns () {
-		
+
 		var hasKenburns = $('.kenburn-hero')[0];
 
 		if (hasKenburns) {
@@ -707,9 +707,10 @@
 			$('.kenburns').attr('width', w_width);
 			$('.kenburns').attr('height', w_height);
 			$('.kenburns').kenburns({
-				images: ['assets/images/hero/kb-slide-1.jpg',
-						'assets/images/hero/kb-slide-2.jpg',
-						'assets/images/hero/kb-slide-3.jpg'
+				images: [
+							'https://source.unsplash.com/random/2440x1578?nature=' + randomNumber(),
+							'https://source.unsplash.com/random/2440x1578?nature=' + randomNumber(),
+							'https://source.unsplash.com/random/2440x1578?nature=' + randomNumber()
 						],
 				frames_per_second: 30,
 				display_time: 5000,
@@ -720,6 +721,10 @@
 		}
 
 	} // initKenburns
+
+	function randomNumber () {
+		return Math.random();
+	}
 
 
 
@@ -749,7 +754,7 @@
 
 
 /* --------------------------------------------------
-	Contact Form JS Validation & AJAX call 
+	Contact Form JS Validation & AJAX call
 -------------------------------------------------- */
 $(function() {
 
@@ -771,39 +776,55 @@ $( '.form-ajax' ).on( 'keyup', 'input.validate-locally', function() {
 $( '.form-ajax' ).submit(function(e) {
 	e.preventDefault();
 	var $this = $( this ),
-			action = $this.attr( 'action' );
+		action = $this.attr( 'action' );
 
 	// The AJAX requrest
 	$.post(
-			action,
-			$this.serialize(),
-			function( data ) {
-				$( '.ajax-message' ).html( data );
-			}
+		action,
+		$this.serialize(),
+		function( data ) {
+			$( '.ajax-message' ).html( data );
+		}
+	);
+});
+
+//	AJAX call
+$( '.subscribe-form' ).submit(function(e) {
+	e.preventDefault();
+	var $this = $( this ),
+		action = $this.attr( 'action' );
+
+	// The AJAX requrest
+	$.post(
+		action,
+		$this.serialize(),
+		function( data, status ) {
+			$( '.subscribe-result' ).html( data );
+		}
 	);
 });
 
 //	Validates the fileds
 function validateField ( field ) {
 	var errorText = "",
-			error = false,
-			value = field.val(),
-			siblings = field.siblings( ".alert-error" );
+		error = false,
+		value = field.val(),
+		siblings = field.siblings( ".alert-error" );
 
 	// Test the name field
 	if ( field.attr("name") === "name" ) {
 		if ( !validateLength( value, 2 ) ) {
-					error = true;
-					errorText += '<i class="fa fa-info-circle"></i> The name is too short!<br>';
-					$('input[name="name"]').addClass('input-error');
+			error = true;
+			errorText += '<i class="fa fa-info-circle"></i> The name is too short!<br>';
+			$('input[name="name"]').addClass('input-error');
 		} else {
 			$('input[name="name"]').removeClass('input-error');
 		}
 
 		if ( !expLettersOnly.test( value ) ) {
-					error = true;
-					errorText += '<i class="fa fa-info-circle"></i> The name can contain only letters and spaces!<br>';
-					$('input[name="name"]').addClass('input-error-2');
+			error = true;
+			errorText += '<i class="fa fa-info-circle"></i> The name can contain only letters and spaces!<br>';
+			$('input[name="name"]').addClass('input-error-2');
 		} else {
 			$('input[name="name"]').removeClass('input-error-2');
 		}

@@ -2,7 +2,7 @@
 
 @section('content')
 
-	@include('includes.alt-header')
+	@include('includes.header')
 
 	<!-- ========== 404 Page - (Not Found) ========== -->
 
@@ -18,8 +18,8 @@
 			</div>
 
 			<ul class="links-404">
-				<li><a href="index.html" class="btn btn-light btn-small">Go Back Home</a></li>
-				<li><a href="pages/contact-1.html" class="btn-ghost-light btn-small">Report this</a></li>
+				<li><a href="{{route('home')}}" class="btn btn-light btn-small">Go Back Home</a></li>
+				<li><a href="{{route('services')}}" class="btn-ghost-light btn-small">View Services</a></li>
 			</ul>
 
 		</div>
@@ -28,6 +28,7 @@
 @endsection
 
 @section('scripts')
+
 	<!-- ========== Scripts ========== -->
 
 	<script src="{{url('assets/js/vendor/jquery-2.1.4.min.js')}}"></script>
@@ -44,8 +45,7 @@
 	<script src="{{url('assets/js/vendor/slick.min.js')}}"></script>
 	<script src="{{url('assets/js/vendor/isotope.min.js')}}"></script>
 	<script src="{{url('assets/js/vendor/wow.min.js')}}"></script>
-
-	<!-- Definity JS -->
 	<script src="{{url('assets/js/main.js')}}"></script>
 	{{-- @include('includes.commonScripts') --}}
+
 @endsection

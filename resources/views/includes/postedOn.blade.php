@@ -1,1 +1,1 @@
-Posted On  {{date("d M Y", strtotime($gist->created_at))}}
+{{date("F W Y", strtotime($gist->created_at))}}

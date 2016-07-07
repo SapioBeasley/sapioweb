@@ -19,6 +19,7 @@
 @endsection
 
 @section('scripts')
+
     <!-- ========== Scripts ========== -->
 
     <script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
@@ -38,8 +39,7 @@
     <script src="../assets/js/vendor/isotope.min.js"></script>
     <script src="../assets/js/vendor/jquery.magnific-popup.min.js"></script>
     <script src="../assets/js/vendor/wow.min.js"></script>
-
-    <!-- Definity JS -->
     <script src="../assets/js/main.js"></script>
     {{-- @include('includes.commonScripts') --}}
+
 @endsection

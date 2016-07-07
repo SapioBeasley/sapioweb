@@ -1,4 +1,10 @@
-- [ ] Contact form function
+- [ ] Contact form function return messages
+- [ ] Add validation to newsletter post
+- [ ] Add validation to contact post
+- [ ] Create endpoint to accept newsletter opt in
+- [ ] Move gists to database
+- [ ] Create descriptions for each gist
+- [ ] Blog pagination
 
 ## Later
 - [ ] Add category to portfolio table
