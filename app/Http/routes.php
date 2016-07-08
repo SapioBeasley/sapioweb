@@ -76,7 +76,7 @@ Route::post('/inquire-post', [
 	'uses' => 'ContactsController@postInquire'
 ]);
 
-Route::get('sitemap', function () {
+Route::get('sitemap.xml', function () {
 
 	$client = new \GuzzleHttp\Client();
 	$gists = $client->request('GET', env('GITHUB_API_URL') . '/users/sapiobeasley/gists');
