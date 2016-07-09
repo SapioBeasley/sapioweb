@@ -159,6 +159,7 @@ return [
         Spatie\Tail\TailServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider::class,
 
     ],
 
@@ -207,7 +208,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Markdown' => Haleks\Markdown\Facades\Markdown::class,
         'Form' => Collective\Html\FormFacade::class,
-      'Html' => Collective\Html\HtmlFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Bugsnag' => Bugsnag\BugsnagLaravel\BugsnagFacade::class,
 
 
     ],

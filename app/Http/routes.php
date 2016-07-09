@@ -98,3 +98,11 @@ Route::get('sitemap', function () {
 
 	return $sitemap->render('xml');
 });
+
+
+
+
+
+Route::get('test', function () {
+	Bugsnag::notifyError('ErrorType', 'Test Error');
+});
