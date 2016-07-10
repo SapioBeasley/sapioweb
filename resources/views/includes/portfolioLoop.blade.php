@@ -8,6 +8,6 @@
                 <h6 class="subheading">{{$portfolio->content}}</h6>
             </div>
         </div>
-        <a href="http://{{$portfolio->content}}/" target="_blank" class="open-btn"><i class="fa fa-expand"></i></a>
+        <a href="http://{{strtolower($portfolio->content)}}/" target="_blank" class="open-btn"><i class="fa fa-expand"></i></a>
     </div>
 </div><!-- / .portfolio-item -->

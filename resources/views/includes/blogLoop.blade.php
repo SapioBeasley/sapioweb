@@ -23,7 +23,13 @@
             </a>
 
             <!-- Blurb -->
-            <p>Lorem ipsum dolor sit amet, tempor consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
+            {{-- <p>
+                {{$gist->owner->login}}
+                <img src="{{$gist->owner->avatar_url}}"/>
+    +"html_url": "https://github.com/SapioBeasley"
+    +"repos_url": "https://api.github.com/users/SapioBeasley/repos"
+                Lorem ipsum dolor sit amet, tempor consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad ...
+            </p> --}}
 
             <!-- Link -->
             <a href="{{route('blog.single', $gist->id)}}" class="btn btn-small">Read More</a>
