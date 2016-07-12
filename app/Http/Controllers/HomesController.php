@@ -19,11 +19,7 @@ class HomesController extends Controller
 
         $portfolios = \App\Portfolio::take(6)->get();
 
-   		$allGists = $this->github->getGists();
-
-        for ($i=0; $i < 3; $i++) {
-            $gists[$i] = $allGists[$i];
-        }
+        $gists = \App\Blog::take(3)->get();
 
 		return view('home')->with([
             'gists' => $gists,

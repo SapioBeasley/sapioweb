@@ -104,5 +104,5 @@ Route::get('sitemap.xml', function () {
 
 
 Route::get('test', function () {
-	Bugsnag::notifyError('ErrorType', 'Test Error');
+	dispatch(new \App\Jobs\BlogManager);
 });
