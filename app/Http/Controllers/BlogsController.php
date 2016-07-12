@@ -17,10 +17,10 @@ class BlogsController extends Controller
 
     public function showBlog()
 	{
-        $gists = $this->github->getGists();
+        $blogs = \App\Blog::paginate(9);
 
 		return view('blog')->with([
-			'gists' => $gists
+			'gists' => $blogs
 		]);
 	}
 
