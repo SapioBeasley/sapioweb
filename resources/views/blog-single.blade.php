@@ -29,10 +29,8 @@
 
 					<!-- Meta data -->
 					<div class="post-meta">
-						<a href="blog-post.html#" class="post-date">
 							<i class="fa fa-calendar-o"></i>
 							<span>@include('includes.postedOn')</span>
-						</a>
 					</div><!-- / .meta -->
 
 					<!-- Title -->
