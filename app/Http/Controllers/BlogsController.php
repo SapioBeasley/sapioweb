@@ -8,25 +8,29 @@ use App\Http\Requests;
 
 class BlogsController extends Controller
 {
-    protected $github;
+  protected $github;
 
-    public function __construct()
-    {
-        $this->github = new \App\Libraries\Github();
-    }
+  public function __construct()
+  {
+    $this->github = new \App\Libraries\Github();
+  }
 
-    public function showBlog()
+  public function showBlog()
 	{
-        $blogs = \App\Blog::paginate(9);
+    $blogs = \App\Blog::paginate(9);
 
 		return view('blog')->with([
 			'gists' => $blogs
 		]);
 	}
 
-    public function showSingleBlog($id)
+  public function showSingleBlog($id)
 	{
-        $gist = $this->github->getSingleGist($id);
+    $gist = $this->github->getSingleGist($id);
+
+    if ($gist->getStatusCode()) {
+      abort(404);
+    };
 
 		return view('blog-single')->with([
 			'gist' => $gist
