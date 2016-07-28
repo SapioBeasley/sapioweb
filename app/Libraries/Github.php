@@ -26,6 +26,6 @@ class Github
 
     $gists = json_decode($gists->getBody());
 
-    return $gists;
+    return response()->json($gists, 200);
   }
 }

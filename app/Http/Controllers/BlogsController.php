@@ -28,12 +28,12 @@ class BlogsController extends Controller
 	{
     $gist = $this->github->getSingleGist($id);
 
-    if ($gist->getStatusCode()) {
+    if (($gist->getStatusCode() === 404) && ($gist->getStatusCode() !== null)) {
       abort(404);
     };
 
 		return view('blog-single')->with([
-			'gist' => $gist
+			'gist' => $gist->getData()
 		]);
 	}
 }
