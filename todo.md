@@ -1,4 +1,10 @@
-- [ ] Contact form function return messages
+- [ ] Switch Instagram and Twitter links in footer
+- [ ] Under what we do: - Maintenance not Maintinance
+- [ ] if your website is over 2 years old, (add comma) it may... 
+- [ ] "latest and greatest." - period inside not outside of quotation marks
+- [ ] The "Sapioweb is built...for our clients" writing under what we do kinda confuses me...is that 1 sentence/thought?
+- [ ] Under design and development, change spelling of "developement" to development
+- [ ] Under 3, "our devops will make sure..." What are devops? It confuses me
 - [ ] Add validation to newsletter post
 - [ ] Add validation to contact post
 - [ ] Create endpoint to accept newsletter opt in
