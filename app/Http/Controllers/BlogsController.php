@@ -17,7 +17,7 @@ class BlogsController extends Controller
 
   public function showBlog()
 	{
-    $blogs = \App\Blog::paginate(9);
+    $blogs = \App\Blog::orderby('created_at', 'DESC')->paginate(9);
 
 		return view('blog')->with([
 			'gists' => $blogs
