@@ -9,56 +9,62 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class BlogManager extends Job implements ShouldQueue
 {
-    use InteractsWithQueue, SerializesModels;
+  use InteractsWithQueue, SerializesModels;
 
-    protected $github;
+  protected $github;
 
-    /**
-     * Create a new job instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->github = new \App\Libraries\Github();
+  /**
+   * Create a new job instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+    $this->github = new \App\Libraries\Github();
+  }
+
+  /**
+   * Execute the job.
+   *
+   * @return void
+   */
+  public function handle()
+  {
+    $gists = $this->github->getGists();
+
+    if($gists->getStatusCode() !== 200){
+      return false;
     }
 
-    /**
-     * Execute the job.
-     *
-     * @return void
-     */
-    public function handle()
-    {
-        $gists = $this->github->getGists();
+    $gists = json_decode($gists->getContent());
 
-        foreach($gists as $gist){
-            $this->saveGist($gist);
-        }
+    foreach($gists as $gist){
+      $this->saveGist($gist);
     }
+  }
 
-    public function saveGist($gist)
-    {
-        if ($this->checkDuplicate($gist)) {
-            $blog = \App\Blog::create([
-                'gist_id' => $gist->id,
-                'description' => $gist->description,
-            ]);
-        }
+  public function saveGist($gist)
+  {
+    if ($this->checkDuplicate($gist)) {
+      $blog = \App\Blog::create([
+        'gist_id' => $gist->id,
+        'description' => $gist->description,
+      ]);
     }
+  }
 
-    public function checkDuplicate($gist)
-    {
-        $blog = \App\Blog::where('gist_id', '=', $gist->id)->first();
+  public function checkDuplicate($gist)
+  {
+    $blog = \App\Blog::where('gist_id', '=', $gist->id)->first();
 
-        switch ($blog) {
-            case null:
-                return true;
-                break;
+    switch ($blog) {
+      case null:
+        return true;
+        break;
 
-            default:
-                return false;
-                break;
-        }
+      default:
+        return false;
+        break;
     }
+  }
 }
