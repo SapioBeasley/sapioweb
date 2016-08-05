@@ -35,4 +35,4 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{Request::url()}}" />
 <meta property="og:description" content="@yield('description')" />
-<meta property="og:image" content="{{asset('images/ogImage' . rand(1,4) . '.jpg') . '?id=' . rand()}}" />
+<meta property="og:image" content="{{asset('og/sapioweb-og-' . rand(1,8) . '.jpg') . '?id=' . rand()}}" />
